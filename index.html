@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Material Selection</title>
 
-    <!-- Bootstrap -->
-    <link 
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
-        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body class="light-page">
 
-    <!-- Navbar included directly -->
-    <nav id="site-nav" class="navbar navbar-expand-sm navbar-dark bg-dark" role="navigation" aria-label="Main navigation">
+    <!-- Navbar Linked to Page2.html and Index.html Below-->
+    <nav id="site-nav" class="navbar navbar-expand-sm navbar-dark bg-dark" role="navigation"
+        aria-label="Main navigation">
         <div class="container">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
                 aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
+            <!-- Linked the file of the Main Page and the 2nd Page-->
             <div id="nav" class="collapse navbar-collapse">
                 <div class="navbar-nav">
                     <a class="nav-link active" aria-current="page" href="index.html">Home</a>
@@ -30,52 +29,80 @@
         </div>
     </nav>
 
-    <!-- Main content -->
+    <!-- Introductry Page Content All Below -->
     <main class="container py-5">
 
-        <!-- Page title -->
         <h1 class="mb-4">Material Selection</h1>
 
-        <!-- Intro paragraph -->
         <p class="lead">
-            This webpage helps users select the best aluminum material based on factors like:
+            The type of material that is used in manufactured products is very important when it comes down to
+            factors like:
         </p>
-
-        <!-- Factors List -->
+        <!-- List of Factors That Are Included in My Decision Tree -->
         <ul class="list-group mb-4" style="max-width: 28rem;">
             <li class="list-group-item">Temperature</li>
             <li class="list-group-item">Strength</li>
-            <li class="list-group-item">Alloy</li>
+            <li class="list-group-item">Alloy Type</li>
         </ul>
-
-        <!-- Resource Link -->
+        <!-- Code of The One of the Links Below -->
         <p class="mb-5">
-            Learn more about why the type of material matters here: 
-            <a href="https://www.metalexchange.com/press/common-aluminum-alloys" 
-               target="_blank">
-               https://www.metalexchange.com/press/common-aluminum-alloys
+            Learn more about why the type of material matters here:
+            <a href="https://www.metalexchange.com/press/common-aluminum-alloys" target="_blank">
+                https://www.metalexchange.com/press/common-aluminum-alloys
             </a>
         </p>
+        <!-- Title to My Image Gallery of Industries that use Aluminum Materials -->
+        <div class="container px-0 mb-5">
+            <h3>Industries That Use Aluminum Materials</h3>
+            <p></p>
 
-        <!-- Hero Section -->
-        <section class="p-5 mb-5 bg-light rounded border">
-            <h2 class="display-6 mb-3">Material Selection Guide</h2>
-            <p class="mb-3">Start exploring the different aluminum alloys and their properties.</p>
-            <a class="btn btn-primary" href="#">Get Started</a>
-        </section>
+            <div class="row g-4">
 
-        <!-- Info Box -->
-        <div class="p-3 mb-4 border rounded">
-            <h3 class="h5 mb-2">Why Material Choice Matters</h3>
-            <p class="mb-0">
-                Choosing the correct aluminum alloy ensures performance, safety, and durability. 
-                <a href="#">Read more</a>
-            </p>
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <a href="/w3images/lights.jpg" target="_blank">
+                            <!-- File to the First Image -->
+                            <img src="/w3images/lights.jpg" class="card-img-top" alt="Lights">
+                        </a>
+                        <div class="card-body">
+                            <!-- Description to the First Image -->
+                            <p class="card-text">Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <a href="/w3images/nature.jpg" target="_blank">
+                            <!-- File to the Second Image -->
+                            <img src="/w3images/nature.jpg" class="card-img-top" alt="Nature">
+                        </a>
+                        <div class="card-body">
+                            <!-- Description to the Second Image  -->
+                            <p class="card-text">Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <a href="/w3images/fjords.jpg" target="_blank">
+                            <!-- File of the Third Image -->
+                            <img src="/w3images/fjords.jpg" class="card-img-top" alt="Fjords">
+                        </a>
+                        <div class="card-body">
+                            <!-- Description to the Third Image -->
+                            <p class="card-text">Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-
-        <!-- Card -->
+        <!-- Size of the Second Card -->
         <div class="card shadow-sm mb-5" style="max-width: 40rem;">
             <div class="card-body">
+                <!-- Description of the Second Card -->
                 <h4 class="card-title h5">Example Alloy Information</h4>
                 <p class="card-text">
                     Different alloys offer different strengths, temperature limits, and formability.
@@ -84,16 +111,10 @@
             </div>
         </div>
 
-        <!-- List Group Example -->
-        <h3 class="h5 mb-3">Quick List</h3>
-        <ul class="list-group" style="max-width: 28rem;">
-            <li class="list-group-item">First item</li>
-            <li class="list-group-item">Second item</li>
-            <li class="list-group-item">Third item</li>
-        </ul>
-
     </main>
+    <!-- -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
