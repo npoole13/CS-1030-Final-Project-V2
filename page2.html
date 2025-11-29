@@ -21,38 +21,32 @@
 
     <!-- Main content -->
     <main class="container py-4">
-        <h1 class="mb-2">Simple Theme in Action</h1>
-        <p class="mb-3">
-            This paragraph uses the page text color. Here’s a <a href="#">content link</a>.
-        </p>
+        <h1>Material Selection Decision Tree</h1>
 
-        <!-- Hero -->
-        <section class="p-5 mb-4 bg-body-tertiary rounded-3">
-            <h2 class="display-6 mb-3">Hero Section</h2>
-            <a class="btn btn-primary" href="#">Get Started</a>
-        </section>
+        <form name="form1" id="form1">
+            Max Temp:
+            <select name="Temperature" id="Temperature">
+                <option value="" selected="selected">Select Temperature</option>
+            </select>
 
-        <!-- Box -->
-        <div class="box mb-4">
-            <h3 class="h5">Plain Box</h3>
-            <p class="mb-0">This is a plain div styled as a surface. <a href="#">Read more</a></p>
-        </div>
+            <br><br>
 
-        <!-- Card -->
-        <div class="card shadow-sm mb-4" style="max-width: 40rem;">
-            <div class="card-body">
-                <h4 class="card-title h5">Card Title</h4>
-                <p class="card-text">Cards pick up the surface/background and text from the theme.</p>
-                <a class="btn btn-primary" href="#">Card Action</a>
-            </div>
-        </div>
+            Alloys:
+            <select name="Alloy" id="Alloy">
+                <option value="" selected="selected">Select Alloy</option>
+            </select>
 
-        <!-- List group -->
-        <ul class="list-group" style="max-width: 28rem;">
-            <li class="list-group-item">First item</li>
-            <li class="list-group-item">Second item</li>
-            <li class="list-group-item">Third item</li>
-        </ul>
+            <br><br>
+
+            Strength:
+            <select name="Strength" id="Strength">
+                <option value="" selected="selected">Select Strength</option>
+            </select>
+
+            <br><br>
+
+            <input type="submit" value="Submit">
+        </form>
     </main>
 
 
@@ -63,7 +57,53 @@
         $("#nav-placeholder").load("navbar.html #site-nav");
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+var subjectObject = {
+  "200": {
+    "2xxx": ["Images", "Tables", "Lists"],
+    "6xxx": ["Borders", "Margins", "Backgrounds", "Float"],
+    "7xxx": ["Variables", "Operators", "Functions", "Conditions"]    
+  },
+  "300": {
+    "2xxx": ["350 MPA", "7075"],
+    "7xxx": ["350 MPA", "7075"]
+  }
+}
 
+window.onload = function() {
+
+  var temperatureSel = document.getElementById("Temperature");
+  var alloySel = document.getElementById("Alloy");
+  var strengthSel = document.getElementById("Strength");
+
+  // Fill first dropdown
+  for (var temp in subjectObject) {
+    temperatureSel.options[temperatureSel.options.length] = new Option(temp, temp);
+  }
+
+  // When Temperature changes
+  temperatureSel.onchange = function() {
+    alloySel.length = 1;   // reset alloy dropdown
+    strengthSel.length = 1; // reset strength dropdown
+
+    let alloys = subjectObject[this.value];
+    for (var alloy in alloys) {
+      alloySel.options[alloySel.options.length] = new Option(alloy, alloy);
+    }
+  }
+
+  // When Alloy changes
+  alloySel.onchange = function() {
+    strengthSel.length = 1;
+
+    let strengthList = subjectObject[temperatureSel.value][this.value];
+    for (var i = 0; i < strengthList.length; i++) {
+      strengthSel.options[strengthSel.options.length] = new Option(strengthList[i], strengthList[i]);
+    }
+  }
+
+}
+</script>
 </body>
 
 </html>
