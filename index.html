@@ -1,69 +1,99 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Material Selection Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Selection</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-
-    <link href="style.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet">
 </head>
-
-<!-- Toggle light-page ↔ dark-page -->
 
 <body class="light-page">
 
-    <!-- Navbar gets added here -->
-    <div id="nav-placeholder"></div>
+    <!-- Navbar included directly -->
+    <nav id="site-nav" class="navbar navbar-expand-sm navbar-dark bg-dark" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
+                aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div id="nav" class="collapse navbar-collapse">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    <a class="nav-link" href="page2.html">Decision Tree</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <!-- Main content -->
-    <main class="container py-4">
-        <h1 class="mb-2">Material Selection</h1>
-        <p class="mb-3">
-            This paragraph uses the page text color. Here’s a <a href="#">content link</a>.
+    <main class="container py-5">
+
+        <!-- Page title -->
+        <h1 class="mb-4">Material Selection</h1>
+
+        <!-- Intro paragraph -->
+        <p class="lead">
+            This webpage helps users select the best aluminum material based on factors like:
         </p>
 
-        <!-- Hero -->
-        <section class="p-5 mb-4 bg-body-tertiary rounded-3">
-            <h2 class="display-6 mb-3">Hero Section</h2>
+        <!-- Factors List -->
+        <ul class="list-group mb-4" style="max-width: 28rem;">
+            <li class="list-group-item">Temperature</li>
+            <li class="list-group-item">Strength</li>
+            <li class="list-group-item">Alloy</li>
+        </ul>
+
+        <!-- Resource Link -->
+        <p class="mb-5">
+            Learn more about why the type of material matters here: 
+            <a href="https://www.metalexchange.com/press/common-aluminum-alloys" 
+               target="_blank">
+               https://www.metalexchange.com/press/common-aluminum-alloys
+            </a>
+        </p>
+
+        <!-- Hero Section -->
+        <section class="p-5 mb-5 bg-light rounded border">
+            <h2 class="display-6 mb-3">Material Selection Guide</h2>
+            <p class="mb-3">Start exploring the different aluminum alloys and their properties.</p>
             <a class="btn btn-primary" href="#">Get Started</a>
         </section>
 
-        <!-- Box -->
-        <div class="box mb-4">
-            <h3 class="h5">Plain Box</h3>
-            <p class="mb-0">This is a plain div styled as a surface. <a href="#">Read more</a></p>
+        <!-- Info Box -->
+        <div class="p-3 mb-4 border rounded">
+            <h3 class="h5 mb-2">Why Material Choice Matters</h3>
+            <p class="mb-0">
+                Choosing the correct aluminum alloy ensures performance, safety, and durability. 
+                <a href="#">Read more</a>
+            </p>
         </div>
 
         <!-- Card -->
-        <div class="card shadow-sm mb-4" style="max-width: 40rem;">
+        <div class="card shadow-sm mb-5" style="max-width: 40rem;">
             <div class="card-body">
-                <h4 class="card-title h5">Card Title</h4>
-                <p class="card-text">Cards pick up the surface/background and text from the theme.</p>
-                <a class="btn btn-primary" href="#">Card Action</a>
+                <h4 class="card-title h5">Example Alloy Information</h4>
+                <p class="card-text">
+                    Different alloys offer different strengths, temperature limits, and formability.
+                </p>
+                <a class="btn btn-primary" href="#">Explore Alloys</a>
             </div>
         </div>
 
-        <!-- List group -->
+        <!-- List Group Example -->
+        <h3 class="h5 mb-3">Quick List</h3>
         <ul class="list-group" style="max-width: 28rem;">
             <li class="list-group-item">First item</li>
             <li class="list-group-item">Second item</li>
             <li class="list-group-item">Third item</li>
         </ul>
+
     </main>
 
-
-
-
-    <script>
-        // Load only the #site-nav element
-        $("#nav-placeholder").load("navbar.html #site-nav");
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
