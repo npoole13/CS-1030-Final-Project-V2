@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Doctype says its a html document and the language is english-->
 
 <head>
     <meta charset="UTF-8">
+    <!-- The charset="UTF-8" sets the text to display properly-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Makes the webpage responsive for mobile and desktop devices-->
     <title>Material Selection</title>
-
+    <!-- Title of the page displayed in the browser tab-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body class="light-page">
-
+    <!-- The body of the webpage with a custom class for styling-->
     <!-- Navbar Linked to Page2.html and Index.html Below-->
     <nav id="site-nav" class="navbar navbar-expand-sm navbar-dark bg-dark" role="navigation"
         aria-label="Main navigation">
+        <!-- aria-label="main navigation" is the navigation bar for using bootstrap classes-->
         <div class="container">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
                 aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
+                <!-- Button for switching between navbar visibility on smaller screens like phones-->
             </button>
             <!-- Linked the file of the Main Page and the 2nd Page-->
             <div id="nav" class="collapse navbar-collapse">
@@ -53,73 +58,75 @@
         </p>
         <!-- Title to My Image Gallery of Industries that use Aluminum Materials -->
         <div class="container px-0 mb-5">
-            <h3>Industries That Use Aluminum Materials</h3>
-            <p></p>
+            <!-- Title to My Image Gallery of Industries that use Aluminum Materials -->
+            <div class="container px-0 mb-5">
+                <h3>Industries That Use Aluminum Materials</h3>
+                <p></p>
 
-            <div class="row g-4">
-
-                <div class="col-md-4">
-                    <div class="card shadow-sm">
-                        <a href="Images/Airplane.jpg" target="_blank">
-                            <!-- File to the First Image -->
-                            <img src="Images/Airplane.jpg" class="card-img-top" alt="Lights">
-                        </a>
-                        <div class="card-body">
-                            <!-- Description to the First Image -->
-                            <p class="card-text">Aerospace </p>
+                <div class="row g-4">
+            <!-- Class="row g-4" creates row with spacing between each column-->
+                    <div class="col-md-4">
+                        <div class="card shadow-sm">
+                            <a href="Images/Airplane.jpg" target="_blank">
+                                <!-- File to the First Image -->
+                                <img src="Images/Airplane.jpg" class="card-img-top" alt="Lights">
+                            </a>
+                            <div class="card-body">
+                                <!-- Description to the First Image -->
+                                <p class="card-text">Aerospace </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- First card shows an airplane image -->
+                    <div class="col-md-4">
+                        <div class="card shadow-sm">
+                            <a href="Images/Automotive-Picture.jpg" target="_blank">
+                                <!-- File to the Second Image -->
+                                <img src="Images/Automotive-Picture.jpg" class="card-img-top" alt="Nature">
+                            </a>
+                            <div class="card-body">
+                                <!-- Description to the Second Image  -->
+                                <p class="card-text">Automotive</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Second card shows a car being assembled -->
+                    <div class="col-md-4">
+                        <div class="card shadow-sm">
+                            <a href="Images/Electronics.jpg" target="_blank">
+                                <!-- File of the Third Image -->
+                                <img src="Images/Electronics.jpg" class="card-img-top" alt="Fjords">
+                            </a>
+                            <div class="card-body">
+                                <!-- Description to the Third Image -->
+                                <p class="card-text">Electronics</p>
+                <!-- Third card shows a machine that makes electronic components -->
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-4">
-                    <div class="card shadow-sm">
-                        <a href="Images/Automotive-Picture.jpg" target="_blank">
-                            <!-- File to the Second Image -->
-                            <img src="Images/Automotive-Picture.jpg" class="card-img-top" alt="Nature">
-                        </a>
-                        <div class="card-body">
-                            <!-- Description to the Second Image  -->
-                            <p class="card-text">Automotive</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card shadow-sm">
-                        <a href="Images/Electronics.jpg" target="_blank">
-                            <!-- File of the Third Image -->
-                            <img src="Images/Electronics.jpg" class="card-img-top" alt="Fjords">
-                        </a>
-                        <div class="card-body">
-                            <!-- Description to the Third Image -->
-                            <p class="card-text">Electronics</p>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-        </div>
-        <!-- Size of the Second Card -->
-        <div class="card shadow-sm mb-5" style="max-width: 40rem;">
-            <div class="card-body">
-                <!-- Description of the Second Card -->
-                <h4 class="card-title h5">What are Alloys</h4>
-                <p class="card-text">
-                    Different alloys offer different strengths, temperature limits, and formability. By combining different metals made by mixing aluminum 
-                    with other elements, such as copper, magnesium silicon, and zinc.
-                </p>
-                <a class="btn btn-primary" href="">Explore More About Alloys</a>
-                <a href="https://www.weerg.com/guides/what-are-aluminium-alloys" target="_blank"> 
-                https://www.weerg.com/guides/what-are-aluminium-alloys
-                
-            </a>
-        </p>
-            </div>
-        </div>
+            <!-- Size of the completely different card on the home page -->
+            <div class="card shadow-sm mb-5" style="max-width: 40rem;">
+                <div class="card-body">
+                    <!-- Description of the different Card -->
+                    <h4 class="card-title h5">What are Alloys</h4>
+                    <p class="card-text">
+                        Different alloys offer different strengths, temperature limits, and formability. By combining
+                        different metals made by mixing aluminum
+                        with other elements, such as copper, magnesium silicon, and zinc.
+                    </p>
+                    <a class="btn btn-primary" href="">Explore More About Alloys</a>
+                       <!-- This button links to additional information about what alloys are and inparticular more about aluminium -->
+                    <a href="https://www.weerg.com/guides/what-are-aluminium-alloys" target="_blank">
+                        https://www.weerg.com/guides/what-are-aluminium-alloys
 
+                    </a>
+                    </p>
+                </div>
+            </div>
+               <!-- End of card body and container for the alloy information part of the home page -->
     </main>
-    <!-- -->
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
